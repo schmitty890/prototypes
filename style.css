@@ -17,9 +17,7 @@ body {
   font-size: 1.5em;
 }
 
-#card div,
-#card p,
-form {
+#card div {
   padding: 1em;
 }
 

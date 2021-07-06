@@ -2,28 +2,25 @@ var card = new Vue({
   el: "#card",
   data: {
     title: "Dinosaurs",
-    input: "",
-    buttonText: "Add Dinosaur",
-    items: ["Tyrannosaurus", "Triceratops", "Stegosaurus"],
-  },
-  computed: {
-    buttonDisabled: function () {
-      return this.input == "";
-    },
-  },
-  watch: {
-    input: _.debounce(function () {
-      this.buttonText =
-        this.input !== "" ? "Add " + this.input : "Add Dinosaur";
-    }, 250),
+    items: [
+      { text: "Velociraptor" },
+      { text: "Triceratops" },
+      { text: "Stegosaurus" },
+    ],
   },
   methods: {
     addItem: function () {
-      if (this.input !== "") {
-        this.items.push(this.input);
+      var input = document.getElementById("itemForm");
 
-        this.input = "";
+      if (input.value !== "") {
+        this.items.push({
+          text: input.value,
+        });
+        input.value = "";
       }
+    },
+    deleteItem: function (index) {
+      this.items.splice(index, 1);
     },
   },
 });
