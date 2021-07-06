@@ -1,35 +1,53 @@
-body {
-  padding: 2em;
+#tiles {
   font-family: sans-serif;
 }
 
-#card {
-  border: 2px solid Gray;
+#tiles ul {
+  display: inline-block;
+  list-style-type: none;
+}
+
+#tiles ul a {
+  text-decoration: none;
+}
+
+#tiles ul a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#tiles ul a li {
+  border: 2px solid #d6d6d6;
+  text-align: center;
+  width: 130px;
+  padding: 20px;
   border-radius: 10px;
+  margin: 0px -10px;
 }
 
-#card header {
-  display: block;
-  border-radius: 8px 8px 0 0;
-  background: orange;
-  padding: 10px;
-  color: white;
-  font-size: 1.5em;
+#tiles ul a li:hover {
+  background: #f9f7f4;
+  cursor: pointer;
 }
 
-#card div {
-  padding: 1em;
+#tiles ul a li.active {
+  border: 2px solid #012169;
 }
 
-#card ul {
-  list-style: none;
-  margin: 0;
-  padding: 0 1em 1em;
+#tiles ul a li.active .tile-text,
+#tiles ul a li.active .tile-description {
+  color: #012169;
 }
 
-#card ul li {
-  padding: 0.25em;
-  border: 1px solid gray;
-  margin: 0.5em 0;
-  border-radius: 3px;
+#tiles ul a li .tile-icon {
+  padding-bottom: 20px;
+}
+
+#tiles ul a li .tile-text {
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+
+#tiles ul a li .tile-description {
+  font-size: 12px;
 }

@@ -1,26 +1,27 @@
-var card = new Vue({
-  el: "#card",
+var tiles = new Vue({
+  el: "#tiles",
   data: {
-    title: "Dinosaurs",
+    title: "Transfers & Withdrawls",
+    selected: undefined,
     items: [
-      { text: "Velociraptor" },
-      { text: "Triceratops" },
-      { text: "Stegosaurus" },
+      {
+        id: 0,
+        icon: "https://via.placeholder.com/50",
+        text: "Cash",
+        description: "Realtime - 3+ days",
+      },
+      {
+        id: 1,
+        icon: "https://via.placeholder.com/50",
+        text: "Wires",
+        description: "Same day+",
+      },
+      {
+        id: 2,
+        icon: "https://via.placeholder.com/50",
+        text: "Checks",
+        description: "3 - 5 days",
+      },
     ],
-  },
-  methods: {
-    addItem: function () {
-      var input = document.getElementById("itemForm");
-
-      if (input.value !== "") {
-        this.items.push({
-          text: input.value,
-        });
-        input.value = "";
-      }
-    },
-    deleteItem: function (index) {
-      this.items.splice(index, 1);
-    },
   },
 });
