@@ -9,14 +9,15 @@
 <body>
 
   <div id="tiles">
-		<ul v-for="(item, index) in items">
-      <a href="#">
-        <li @click="selected = item.id" :class="{active:selected == item.id}">
-          <img class="tile-icon" :src="item.icon" />
-          <div class="tile-text">{{ item.text }}</div>
-          <div class="tile-description">{{ item.description }}</div>
+		<ul >
+        <li v-for="(item, index) in items" @click="selected = item.id" :class="{active:selected == item.id}">
+          <a href="#">
+            <img class="tile-icon" :src="item.icon" />
+            <div class="tile-text">{{ item.text }}</div>
+            <div class="tile-description">{{ item.description }}</div>
+        </a>
         </li>
-      </a>
+      
 		</ul>
   </div>
 

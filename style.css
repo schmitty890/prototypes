@@ -3,12 +3,26 @@
 }
 
 #tiles ul {
-  display: inline-block;
   list-style-type: none;
 }
 
-#tiles ul a {
+#tiles ul li a {
   text-decoration: none;
+}
+
+#tiles ul li {
+  display: inline-block;
+  border: 2px solid #d6d6d6;
+  text-align: center;
+  width: 130px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+#tiles ul li:hover {
+  background: #f9f7f4;
+  cursor: pointer;
 }
 
 #tiles ul a:visited {
@@ -16,38 +30,24 @@
   color: black;
 }
 
-#tiles ul a li {
-  border: 2px solid #d6d6d6;
-  text-align: center;
-  width: 130px;
-  padding: 20px;
-  border-radius: 10px;
-  margin: 0px -10px;
-}
-
-#tiles ul a li:hover {
-  background: #f9f7f4;
-  cursor: pointer;
-}
-
-#tiles ul a li.active {
+#tiles ul li.active {
   border: 2px solid #012169;
 }
 
-#tiles ul a li.active .tile-text,
-#tiles ul a li.active .tile-description {
+#tiles ul li.active .tile-text,
+#tiles ul li.active .tile-description {
   color: #012169;
 }
 
-#tiles ul a li .tile-icon {
+#tiles ul li .tile-icon {
   padding-bottom: 20px;
 }
 
-#tiles ul a li .tile-text {
+#tiles ul li .tile-text {
   padding-bottom: 20px;
   font-weight: 700;
 }
 
-#tiles ul a li .tile-description {
+#tiles ul li .tile-description {
   font-size: 12px;
 }
